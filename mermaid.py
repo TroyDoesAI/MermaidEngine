@@ -9,7 +9,7 @@ class Mermaid:
         self.pipeline = transformers.pipeline(
             "text-generation",
             model=model_id,
-            model_kwargs={"torch_dtype": torch.int},
+            model_kwargs={"torch_dtype": torch.float16},
             device_map="auto",
         )
     
